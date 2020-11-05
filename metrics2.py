@@ -97,8 +97,8 @@ class metrics:
     def get_format_distributions(self, first_graph, second_graph):
         """
         форматированное распределение степеней
-        :param first_graph: ребра первого графа
-        :param second_graph: ребра второго графа
+        :param first_graph: первое неформатированное распределение
+        :param second_graph: второе неформатированное распределение
         :return: форматированное распределение степеней
         """
         first_graph_deg, first_graph_deg_count = self.get_distribution(first_graph)
