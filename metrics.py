@@ -76,7 +76,7 @@ class metrics:
             last_index = len(self.degrees)
         else:
             last_index = 30
-        f, ax = plt.subplots(figsize=(10, 10))
+        f, ax = plt.subplots(figsize=(40, 20))
         plt.subplot(2, 1, 1)
         sns.set_color_codes("dark")
         sns.barplot(x=self.degrees[:last_index], y=self.first_graph_deg_count[:last_index],
@@ -88,6 +88,7 @@ class metrics:
         sns.lineplot(x=self.degrees[:last_index] - 1, y=self.second_graph_deg_count[:last_index], color="b")
         plt.xlabel("degree")
         plt.ylabel("count")
+        plt.xticks(rotation=-45)
         plt.subplot(2, 1, 2)
         sns.lineplot(x=self.degrees - 1, y=self.kl_d_dist, color="black",
                      label='KL')
